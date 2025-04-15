@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سایت رسمی علیرضا مرزبان (alirezabytes) - آموزش هک، امنیت سایبری، پروژه‌ها و دوره‌های آموزشی">
+    <meta name="keywords" content="هک، امنیت سایبری، آموزش هک، دوره امنیت سایبری، پروژه‌های برنامه‌نویسی، alirezabytes">
+    <meta name="author" content="علیرضا مرزبان">
+    <meta name="robots" content="index, follow">
+    <title>علیرضا مرزبان - alirezabytes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Inconsolata&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #1A1A1A;
+            color: #00FF00;
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.6;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            border-bottom: 1px solid #00FF00;
+        }
+        .logo img {
+            width: 200px;
+            margin-top: 20px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #00FF00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .terminal {
+            margin: 30px 0;
+            font-family: 'Inconsolata', monospace;
+            font-size: 1.2em;
+        }
+        .terminal::before {
+            content: "$> ";
+            color: #00FF00;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .social-links a, .projects a, .videos a, .courses a {
+            color: #00FF00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-links a:hover, .projects a:hover, .videos a:hover, .courses a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            padding: 20px;
+            border-top: 1px solid #00FF00;
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            .logo img {
+                width: 150px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            .terminal {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="alirezabytes-logo.png" alt="لوگوی alirezabytes">
+        </div>
+        <nav>
+            <a href="index.html">خانه</a>
+            <a href="about.html">درباره من</a>
+            <a href="projects.html">پروژه‌ها</a>
+            <a href="videos.html">ویدیوها</a>
+            <a href="courses.html">دوره‌ها</a>
+            <a href="blog.html">بلاگ</a>
+            <a href="contact.html">تماس با من</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="terminal" id="terminal-text"></div>
+    </section>
+
+    <section>
+        <h2>به سایت علیرضا مرزبان (alirezabytes) خوش آمدید</h2>
+        <p>اینجا مکانی برای یادگیری هک، امنیت سایبری و مشاهده پروژه‌های من است.</p>
+    </section>
+
+    <section>
+        <h2>شبکه‌های اجتماعی</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/alirezabytes" target="_blank">اینستاگرام</a>
+            <a href="https://t.me/alirezabytes" target="_blank">تلگرام</a>
+            <a href="https://x.com/AlirezaBytes" target="_blank">ایکس</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© ۱۴۰۴ - تمامی حقوق برای علیرضا مرزبان محفوظ است.</p>
+    </footer>
+
+    <script>
+        const text = "به سایت alirezabytes خوش آمدید... حالت هک فعال شد...";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("terminal-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
